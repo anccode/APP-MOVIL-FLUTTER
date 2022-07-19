@@ -24,7 +24,7 @@ class addnote extends StatelessWidget {
               });
             },
             child: Text(
-              "save",
+              "GUARDAR",
             ),
           ),
         ],
@@ -40,7 +40,7 @@ class addnote extends StatelessWidget {
                   expands: true,
                   maxLines: null,
                   decoration: InputDecoration(
-                    hintText: 'title',
+                    hintText: 'NOMBRE DEL PROGRAMA',
                   ),
                 ),
               ),

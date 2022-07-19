@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 import 'model.dart';
 import 'mainpage.dart';
+import 'add.dart';
 
 class Teacher extends StatefulWidget {
   String id;
@@ -100,12 +101,12 @@ class _TeacherState extends State<Teacher> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => mainpage(),
+                    builder: (context) => add(),
                   ),
                 );
               },
               child: Text(
-                "asistencia",
+                "Agregar Estudiante",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,

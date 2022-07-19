@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'addpost.dart';
 import 'editpost.dart';
-
+import 'mainpage.dart';
 class posts extends StatefulWidget {
   @override
   _postsState createState() => _postsState();
@@ -25,7 +25,7 @@ class _postsState extends State<posts> {
         ),
       ),
       appBar: AppBar(
-        title: Text('Posts'),
+        title: Text('VINCULACION CON EL MEDIO'),
       ),
       body: StreamBuilder(
         stream: _usersStream,
@@ -52,7 +52,7 @@ class _postsState extends State<posts> {
                       context,
                       MaterialPageRoute(
                         builder: (_) =>
-                            add(),
+                            mainpage(),
                       ),
                     );
                   },
@@ -84,6 +84,25 @@ class _postsState extends State<posts> {
                             horizontal: 16,
                           ),
                         ),
+                      ),
+                      //boton de editar y eliminar
+                      MaterialButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  editnote(docid: snapshot.data!.docs[index]),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "EDITAR",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                        color: Colors.indigo[900],
                       ),
                     ],
                   ),

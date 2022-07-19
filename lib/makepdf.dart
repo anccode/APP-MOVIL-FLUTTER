@@ -65,7 +65,7 @@ class _reporttState extends State<reportt> {
                 height: 20,
               ),
               pw.Text(
-                'Attendance sheet',
+                'VENTANA DE ASISTENCIA',
                 style: pw.TextStyle(
                   fontSize: 25,
                 ),
