@@ -78,7 +78,7 @@ class _addState extends State<add> {
               children: [
                 Row(
                   children: [
-                    Text('Class : '),
+                    Text('CICLO : '),
                     DropdownButton<String>(
                       dropdownColor: Color.fromARGB(255, 0, 255, 21),
                       isDense: true,
@@ -102,7 +102,6 @@ class _addState extends State<add> {
                         setState(() {
                           _currentItemSelected = newValueSelected!;
                           rool = newValueSelected;
-
                           ww = '';
                           ww = _currentItemSelected + _currentItemSelected1;
                         });
@@ -117,7 +116,7 @@ class _addState extends State<add> {
                 ),
                 Row(
                   children: [
-                    Text('Div : '),
+                    Text('Seccion : '),
                     DropdownButton<String>(
                       dropdownColor: Color.fromARGB(255, 26, 255, 0),
                       isDense: true,
@@ -154,6 +153,24 @@ class _addState extends State<add> {
             ),
             SizedBox(
               height: 20,
+            ),
+            MaterialButton(
+              color: Color.fromARGB(255, 2, 11, 128),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              onPressed: () {
+                ref.add({
+                  'name': name.text,
+                  'div': ww,
+                  'roll': rolln.text,
+                });
+              },
+              child: Text(
+                'Agregar estudiante',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ),
           ],
         ),

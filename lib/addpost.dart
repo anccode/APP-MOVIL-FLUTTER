@@ -6,6 +6,8 @@ import 'main.dart';
 
 class addnote extends StatelessWidget {
   TextEditingController title = TextEditingController();
+  TextEditingController docente = TextEditingController();
+  DateTime fecha = DateTime(2022, 12, 24);
 
   CollectionReference ref = FirebaseFirestore.instance.collection('posts');
 
@@ -18,6 +20,8 @@ class addnote extends StatelessWidget {
             onPressed: () {
               ref.add({
                 'title': title.text,
+                'docente': docente.text,
+                'fecha': fecha.day,
               }).whenComplete(() {
                 Navigator.pushReplacement(
                     context, MaterialPageRoute(builder: (_) => posts()));
@@ -41,6 +45,19 @@ class addnote extends StatelessWidget {
                   maxLines: null,
                   decoration: InputDecoration(
                     hintText: 'NOMBRE DEL PROGRAMA',
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(border: Border.all()),
+                child: TextField(
+                  controller: docente,
+                  expands: true,
+                  maxLines: null,
+                  decoration: InputDecoration(
+                    hintText: 'NOMBRE DEL DOCENTE',
                   ),
                 ),
               ),

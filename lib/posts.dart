@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'addpost.dart';
 import 'editpost.dart';
 import 'mainpage.dart';
+
 class posts extends StatefulWidget {
   @override
   _postsState createState() => _postsState();
@@ -51,8 +52,7 @@ class _postsState extends State<posts> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) =>
-                            mainpage(),
+                        builder: (_) => mainpage(),
                       ),
                     );
                   },
@@ -79,13 +79,18 @@ class _postsState extends State<posts> {
                               fontSize: 20,
                             ),
                           ),
+                          subtitle: Text(
+                            snapshot.data!.docChanges[index].doc['docente'],
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
                           contentPadding: EdgeInsets.symmetric(
                             vertical: 12,
                             horizontal: 16,
                           ),
                         ),
                       ),
-                      //boton de editar y eliminar
                       MaterialButton(
                         onPressed: () {
                           Navigator.of(context).push(
