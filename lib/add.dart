@@ -7,11 +7,14 @@ class add extends StatefulWidget {
 }
 
 class _addState extends State<add> {
+
+//creamos variables para luego guardarlos ahi
   TextEditingController name = TextEditingController();
   TextEditingController div = TextEditingController();
   TextEditingController rolln = TextEditingController();
-
+//creamos la base de datos en firebase para asi poder guardar en ahi a los alumnos 
   CollectionReference ref = FirebaseFirestore.instance.collection('users');
+  //creamos los salones par ala vista
   var ww = '1A';
   var options = [
     '1',
@@ -27,16 +30,21 @@ class _addState extends State<add> {
   ];
   var _currentItemSelected = "1";
   var rool = "1";
-
+//las secciones
   var options1 = [
     'A',
     'B',
   ];
+
   var _currentItemSelected1 = "A";
   var rool1 = "A";
 
   @override
+
+
   Widget build(BuildContext context) {
+
+    //agragmos diseño
     return Scaffold(
       appBar: AppBar(
         title: Text('AGREGAR ESTUDIANTE'),
@@ -53,6 +61,7 @@ class _addState extends State<add> {
                 textAlign: TextAlign.center,
                 controller: name,
                 decoration: InputDecoration(
+                  //el
                   hintText: 'NOMBRE',
                 ),
               ),
@@ -61,6 +70,7 @@ class _addState extends State<add> {
               height: 10,
             ),
             Container(
+              //agregamos el codigo del estudiante
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
                 textAlign: TextAlign.center,
@@ -78,20 +88,20 @@ class _addState extends State<add> {
               children: [
                 Row(
                   children: [
-                    Text('CICLO : '),
+                    Text('Ciclo : '),
                     DropdownButton<String>(
-                      dropdownColor: Color.fromARGB(255, 0, 255, 21),
+                      dropdownColor: Color.fromARGB(255, 63, 133, 190),
                       isDense: true,
                       isExpanded: false,
-                      iconEnabledColor: Color.fromARGB(255, 1, 1, 255),
-                      focusColor: Color.fromARGB(255, 0, 17, 251),
+                       iconEnabledColor: Colors.blue[900],
+                      focusColor: Color.fromARGB(255, 8, 6, 163),
                       items: options.map((String dropDownStringItem) {
                         return DropdownMenuItem<String>(
                           value: dropDownStringItem,
                           child: Text(
                             dropDownStringItem,
                             style: TextStyle(
-                              color: Color.fromARGB(255, 11, 0, 0),
+                              color: Color.fromARGB(255, 15, 14, 14),
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -116,9 +126,9 @@ class _addState extends State<add> {
                 ),
                 Row(
                   children: [
-                    Text('Seccion : '),
+                    Text('Grupo: '),
                     DropdownButton<String>(
-                      dropdownColor: Color.fromARGB(255, 26, 255, 0),
+                      dropdownColor: Color.fromARGB(255, 63, 133, 190),
                       isDense: true,
                       isExpanded: false,
                       iconEnabledColor: Colors.blue[900],
@@ -155,7 +165,7 @@ class _addState extends State<add> {
               height: 20,
             ),
             MaterialButton(
-              color: Color.fromARGB(255, 2, 11, 128),
+              color: Color.fromARGB(255, 50, 99, 146),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               onPressed: () {
@@ -169,6 +179,7 @@ class _addState extends State<add> {
                 'Agregar estudiante',
                 style: TextStyle(
                   color: Colors.white,
+                  fontSize: 20,
                 ),
               ),
             ),

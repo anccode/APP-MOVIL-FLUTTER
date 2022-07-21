@@ -67,9 +67,9 @@ class _mainpageState extends State<mainpage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                'Attendance Page',
+                'Asistencia Alumnos',
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 20,
                 ),
               ),
               SizedBox(
@@ -150,7 +150,7 @@ class _mainpageState extends State<mainpage> {
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (snapshot.hasError) {
-              return Text("something is wrong");
+              return Text("Algo salio mal");
             }
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(
@@ -191,16 +191,16 @@ class _mainpageState extends State<mainpage> {
                           decoration: BoxDecoration(
                             color: temp.contains(snapshot
                                     .data!.docChanges[index].doc['name'])
-                                ? Color.fromARGB(255, 248, 20, 4)
-                                : Color.fromARGB(255, 0, 228, 8),
+                                ? Color.fromARGB(255, 4, 248, 20)
+                                : Color.fromARGB(255, 228, 23, 0),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
                             child: Text(
                               temp.contains(snapshot
                                       .data!.docChanges[index].doc['name'])
-                                  ? 'Remove'
-                                  : 'add',
+                                  ? 'Presente'
+                                  : 'Falto',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,

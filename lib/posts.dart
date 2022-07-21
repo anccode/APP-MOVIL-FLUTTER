@@ -32,7 +32,7 @@ class _postsState extends State<posts> {
         stream: _usersStream,
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
-            return Text("something is wrong");
+            return Text("algo salio mal");
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
@@ -70,7 +70,7 @@ class _postsState extends State<posts> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                             side: BorderSide(
-                              color: Colors.black,
+                              color: Color.fromARGB(255, 16, 2, 97),
                             ),
                           ),
                           title: Text(
@@ -107,7 +107,7 @@ class _postsState extends State<posts> {
                             fontSize: 20,
                           ),
                         ),
-                        color: Colors.indigo[900],
+                        color: Colors.blue[900],
                       ),
                     ],
                   ),

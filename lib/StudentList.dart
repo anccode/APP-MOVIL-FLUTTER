@@ -15,7 +15,7 @@ class _studentListState extends State<studentList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Students'),
+        title: Text('Lista de Estudiantes'),
       ),
       body: StreamBuilder(
         stream: _usersStream,
@@ -50,15 +50,16 @@ class _studentListState extends State<studentList> {
                         ),
                         child: ListTile(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(15),
                             side: BorderSide(
-                              color: Colors.black,
+                              color: Color.fromARGB(255, 24, 4, 97),
+                              
                             ),
                           ),
                           title: Text(
                             snapshot.data!.docChanges[index].doc['email'],
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 23,
                             ),
                           ),
                           contentPadding: EdgeInsets.symmetric(

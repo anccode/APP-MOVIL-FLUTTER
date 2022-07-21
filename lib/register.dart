@@ -38,12 +38,12 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[900],
+      backgroundColor:Colors.blue[900],
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.orangeAccent[700],
+              color:Colors.blue[900],
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               child: SingleChildScrollView(
@@ -63,7 +63,7 @@ class _RegisterState extends State<Register> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 50,
                           ),
                         ),
                         SizedBox(
@@ -77,7 +77,7 @@ class _RegisterState extends State<Register> {
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Email',
+                            hintText: 'Correo intitucional',
                             enabled: true,
                             contentPadding: const EdgeInsets.only(
                                 left: 14.0, bottom: 8.0, top: 8.0),
@@ -92,12 +92,12 @@ class _RegisterState extends State<Register> {
                           ),
                           validator: (value) {
                             if (value!.length == 0) {
-                              return "Email cannot be empty";
+                              return "Email no puede estar vacio";
                             }
                             if (!RegExp(
                                     "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
                                 .hasMatch(value)) {
-                              return ("Please enter a valid email");
+                              return ("Email invalido no existe");
                             } else {
                               return null;
                             }
@@ -123,7 +123,7 @@ class _RegisterState extends State<Register> {
                                 }),
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Password',
+                            hintText: 'Contraseña',
                             enabled: true,
                             contentPadding: const EdgeInsets.only(
                                 left: 14.0, bottom: 8.0, top: 15.0),
@@ -139,10 +139,10 @@ class _RegisterState extends State<Register> {
                           validator: (value) {
                             RegExp regex = new RegExp(r'^.{6,}$');
                             if (value!.isEmpty) {
-                              return "Password cannot be empty";
+                              return "La contraseña no puede estar vacía";
                             }
                             if (!regex.hasMatch(value)) {
-                              return ("please enter valid password min. 6 character");
+                              return ("por favor ingrese una contraseña válida min. 6 caracteres");
                             } else {
                               return null;
                             }
@@ -167,7 +167,7 @@ class _RegisterState extends State<Register> {
                                 }),
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Confirm Password',
+                            hintText: 'Confirmar contraseña',
                             enabled: true,
                             contentPadding: const EdgeInsets.only(
                                 left: 14.0, bottom: 8.0, top: 15.0),
@@ -183,7 +183,7 @@ class _RegisterState extends State<Register> {
                           validator: (value) {
                             if (confirmpassController.text !=
                                 passwordController.text) {
-                              return "Password did not match";
+                              return "La contraseña no coincidió";
                             } else {
                               return null;
                             }
@@ -197,7 +197,7 @@ class _RegisterState extends State<Register> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Rool : ",
+                              "Rol Usuario: ",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -256,7 +256,7 @@ class _RegisterState extends State<Register> {
                                 );
                               },
                               child: Text(
-                                "Login",
+                                "Iniciar Seccion",
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -277,7 +277,7 @@ class _RegisterState extends State<Register> {
                                     passwordController.text, rool);
                               },
                               child: Text(
-                                "Register",
+                                "Registrar",
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -293,8 +293,8 @@ class _RegisterState extends State<Register> {
                           "Bienvenido Unionista",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 30,
-                            color: Colors.yellowAccent[400],
+                            fontSize: 40,
+                            color: Color.fromARGB(255, 250, 250, 250),
                           ),
                         ),
                       ],

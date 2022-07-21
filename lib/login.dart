@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.orangeAccent[700],
+              color: Colors.blue[900],
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.70,
               child: Center(
@@ -40,11 +40,11 @@ class _LoginPageState extends State<LoginPage> {
                           height: 30,
                         ),
                         Text(
-                          "Login",
+                          "App VieM",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 55,
                           ),
                         ),
                         SizedBox(
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Email',
+                            hintText: 'Correo Institucional',
                             enabled: true,
                             contentPadding: const EdgeInsets.only(
                                 left: 14.0, bottom: 8.0, top: 8.0),
@@ -70,12 +70,12 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           validator: (value) {
                             if (value!.length == 0) {
-                              return "Email cannot be empty";
+                              return "Email no puede estar vacio";
                             }
                             if (!RegExp(
                                     "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
                                 .hasMatch(value)) {
-                              return ("Please enter a valid email");
+                              return ("Email invalido no existe");
                             } else {
                               return null;
                             }
@@ -103,10 +103,10 @@ class _LoginPageState extends State<LoginPage> {
                                 }),
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Password',
+                            hintText: 'Contraseña',
                             enabled: true,
                             contentPadding: const EdgeInsets.only(
-                                left: 14.0, bottom: 8.0, top: 15.0),
+                                left: 14.0, bottom: 8.0, top: 15.0,),
                             focusedBorder: OutlineInputBorder(
                               borderSide: new BorderSide(color: Colors.white),
                               borderRadius: new BorderRadius.circular(10),
@@ -119,10 +119,10 @@ class _LoginPageState extends State<LoginPage> {
                           validator: (value) {
                             RegExp regex = new RegExp(r'^.{6,}$');
                             if (value!.isEmpty) {
-                              return "Password cannot be empty";
+                              return "Contraseña Invalida";
                             }
                             if (!regex.hasMatch(value)) {
-                              return ("please enter valid password min. 6 character");
+                              return ("por favor ingrese una contraseña válida min. 6 caracteres");
                             } else {
                               return null;
                             }
@@ -133,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                           keyboardType: TextInputType.emailAddress,
                         ),
                         RaisedButton(
-                          color: Colors.orange[900],
+                          color: Color.fromARGB(255, 244, 243, 242),
                           textColor: Colors.white,
                           shape: RoundedRectangleBorder(
                               // side: BorderSide(color: Colors.black, width: 1),
@@ -146,11 +146,12 @@ class _LoginPageState extends State<LoginPage> {
                             );
                           },
                           child: Text(
-                            "Forgot Password ....",
+                            "¿Olvidaste tu contraseña?",
                             style: TextStyle(
-                              color: Colors.white,
+                              color:Color.fromARGB(255, 3, 3, 3),
                               fontSize: 18,
-                              decoration: TextDecoration.underline,
+                              
+                             
                             ),
                           ),
                         ),
@@ -171,7 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                                 emailController.text, passwordController.text);
                           },
                           child: Text(
-                            "Login",
+                            "Iniciar sesion",
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -225,7 +226,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       color: Colors.blue[900],
                       child: Text(
-                        "Register Now",
+                        "Registrarse",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -240,6 +241,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 40,
+                         color: Colors.blue[900],
                       ),
                     ),
                     SizedBox(
@@ -253,7 +255,8 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
-                            color: Colors.blue[900],
+                             color: Colors.blue[900],
+                         
                           ),
                         ),
                         Text(
@@ -261,7 +264,8 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
-                            color: Colors.yellowAccent[400],
+                             color: Colors.blue[900],
+                           
                           ),
                         ),
                       ],

@@ -39,8 +39,8 @@ class _ForgotpassState extends State<Forgotpass> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Forgot\n"
-                            "Password",
+                            "Recuperar\n"
+                            "Contraseña?",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -48,7 +48,7 @@ class _ForgotpassState extends State<Forgotpass> {
                             ),
                           ),
                           Text(
-                            "Dont worry...",
+                            "Ingresa tu correo electrónico",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -66,7 +66,7 @@ class _ForgotpassState extends State<Forgotpass> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              hintText: 'Email',
+                              hintText: 'Correo Institucional',
                               enabled: true,
                               contentPadding: const EdgeInsets.only(
                                   left: 14.0, bottom: 8.0, top: 8.0),
@@ -82,12 +82,12 @@ class _ForgotpassState extends State<Forgotpass> {
                             textInputAction: TextInputAction.done,
                             validator: (value) {
                               if (value!.length == 0) {
-                                return "Email cannot be empty";
+                                return "El correo electrónico no puede estar vacío";
                               }
                               if (!RegExp(
                                       "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
                                   .hasMatch(value)) {
-                                return ("Please enter a valid email");
+                                return ("Email invalido no existe");
                               } else {
                                 return null;
                               }
@@ -117,7 +117,7 @@ class _ForgotpassState extends State<Forgotpass> {
                                           builder: (context) => LoginPage()));
                                 },
                                 child: Text(
-                                  "Login",
+                                  "Iniciar Seccion",
                                   style: TextStyle(
                                     fontSize: 20,
                                   ),
@@ -137,7 +137,7 @@ class _ForgotpassState extends State<Forgotpass> {
                                   });
                                 },
                                 child: Text(
-                                  "Ok",
+                                  "Enviar",
                                   style: TextStyle(
                                     fontSize: 20,
                                   ),
@@ -179,21 +179,22 @@ class _ForgotpassState extends State<Forgotpass> {
                         height: 40,
                       ),
                       Text(
-                        "Made by",
+                        "Universidad",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 40,
+                           color: Colors.blue[900],
                         ),
                       ),
                       SizedBox(
                         height: 5,
                       ),
                       Text(
-                        "WEBFUN",
+                        "Peruana Union",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                          color: Colors.yellowAccent[400],
+                          fontSize: 45,
+                          color: Colors.blue[900],
                         ),
                       ),
                     ],

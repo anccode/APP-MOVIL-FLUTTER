@@ -46,7 +46,8 @@ class _TeacherState extends State<Teacher> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Teacher",
+          "Bienvenido Docente",
+          
         ),
         actions: [
           IconButton(
@@ -72,13 +73,13 @@ class _TeacherState extends State<Teacher> {
                 );
               },
               child: Text(
-                "List of Student",
+                "Lista de Estudiantes",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                 ),
               ),
-              color: Colors.indigo[900],
+              color:Colors.blue[900],
             ),
             MaterialButton(
               onPressed: () {
@@ -89,13 +90,13 @@ class _TeacherState extends State<Teacher> {
                 );
               },
               child: Text(
-                "Post",
+                "      Programas           ",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                 ),
               ),
-              color: Colors.indigo[900],
+             color:Colors.blue[900],
             ),
             MaterialButton(
               onPressed: () {
@@ -112,7 +113,7 @@ class _TeacherState extends State<Teacher> {
                   fontSize: 20,
                 ),
               ),
-              color: Colors.indigo[900],
+              color:Colors.blue[900],
             ),
           ],
         ),

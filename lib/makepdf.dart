@@ -49,7 +49,7 @@ class _reporttState extends State<reportt> {
             marginBottom: 0,
             marginLeft: 0,
             marginRight: 0,
-            marginTop: 0,
+            marginTop: 15,
           ),
           orientation: pw.PageOrientation.portrait,
           theme: pw.ThemeData.withFont(
@@ -65,9 +65,9 @@ class _reporttState extends State<reportt> {
                 height: 20,
               ),
               pw.Text(
-                'VENTANA DE ASISTENCIA',
+                'LISTA DE ASISTENCIA',
                 style: pw.TextStyle(
-                  fontSize: 25,
+                  fontSize: 35,
                 ),
               ),
               pw.SizedBox(
@@ -78,9 +78,9 @@ class _reporttState extends State<reportt> {
                 children: [
                   pw.Row(children: [
                     pw.Text(
-                      'Date :',
+                      'Fecha :',
                       style: pw.TextStyle(
-                        fontSize: 20,
+                        fontSize: 25,
                       ),
                     ),
                     pw.Text(
@@ -93,7 +93,7 @@ class _reporttState extends State<reportt> {
                   pw.Row(
                     children: [
                       pw.Text(
-                        'Class : ',
+                        'Ciclo : ',
                         style: pw.TextStyle(
                           fontSize: 25,
                         ),
@@ -123,7 +123,7 @@ class _reporttState extends State<reportt> {
                         mainAxisAlignment: pw.MainAxisAlignment.center,
                         children: [
                           pw.Text(
-                            'index',
+                            'N.º Orden',
                             style: pw.TextStyle(
                               fontSize: 20.0,
                             ),
@@ -133,7 +133,7 @@ class _reporttState extends State<reportt> {
                         mainAxisAlignment: pw.MainAxisAlignment.center,
                         children: [
                           pw.Text(
-                            'Name',
+                            'Nombre',
                             style: pw.TextStyle(
                               fontSize: 20.0,
                             ),
